@@ -1,0 +1,9 @@
+.arrowFilledDown {
+  position: absolute;
+  fill: var(--danger-red);
+  width: 45px;
+  height: 45px;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}

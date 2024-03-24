@@ -1,0 +1,164 @@
+.footer {
+  width: 100%;
+  height: 70vh;
+  z-index: 3;
+  position: relative;
+  border: 1px solid var(--border-grey);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+
+  .footerContent {
+    width: 100%;
+    height: 70%;
+    background-color: var(--background-grey);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .footerContentLeft {
+      width: 50%;
+      height: 100%;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footerContentRight {
+      width: 50%;
+      height: 100%;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .contentWrapped {
+        margin: 30px 0px;
+        text-align: center;
+
+        p:nth-child(1) {
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    height: 30%;
+    width: 100%;
+
+    .footerSoMe {
+      height: 100%;
+      width: 60%;
+      background-color: var(--main-neon-green);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      display: flex;
+      padding: 15px;
+      justify-content: space-between;
+      align-self: center;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      .soMeIcon {
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+        width: 25px;
+      }
+
+      .soMeIcon:hover {
+        transform: translateY(-5px);
+      }
+      // THIS IS A MODAL------------------------------------
+      .iconLink {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hoverStaticModal {
+          display: none;
+          position: absolute;
+          top: -70px;
+          left: -38px;
+          transform: translateY(50%);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          height: 30px;
+          background-color: var(--main-white);
+          color: var(--main-black);
+          -webkit-animation: scale-in-center 0.4s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: scale-in-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+            both;
+
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+      // THIS IS A MODAL-----------------------------------
+      .iconLink:hover .hoverStaticModal {
+        display: flex;
+      }
+    }
+
+    .footerCopyRights {
+      height: 100%;
+      width: 40%;
+      background-color: var(--main-light-orange);
+      border-radius: 15px;
+      margin-left: 15px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    height: 90vh;
+    .footerContent {
+      flex-direction: column;
+
+      .footerContentLeft {
+        width: 100%;
+      }
+
+      .footerContentRight {
+        width: 100%;
+      }
+    }
+    .footerBottom {
+      flex-direction: column;
+      .footerCopyRights {
+        width: 100%;
+        margin: 15px 15px 0px 15px;
+      }
+    }
+  }
+}

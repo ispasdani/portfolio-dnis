@@ -1,0 +1,91 @@
+.startMenu {
+  width: 200px;
+  min-height: 200px;
+  position: absolute;
+  bottom: 6vh;
+  left: -50px;
+  z-index: 3;
+  -webkit-animation: scale-in-ver-bottom 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  display: flex;
+  background: rgba(3, 4, 94, 0.64);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+
+  .startMenuContent {
+    width: 200px;
+    height: 100%;
+
+    .startMenuItem {
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid #4a4a4a;
+      color: var(--main-white);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0px 10px;
+      font-size: 20px;
+      position: relative;
+      cursor: pointer;
+
+      .itemDecorLine {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 5px;
+        background-color: var(--main-white);
+        transition: 0.3s all ease-in-out;
+      }
+    }
+
+    .startMenuItem:nth-child(4) {
+      border: none;
+    }
+
+    .startMenuItem:hover:nth-child(1) {
+      border-top-right-radius: 10px;
+    }
+
+    .startMenuItem:hover .itemDecorLine {
+      width: 100%;
+    }
+  }
+}
+
+@-webkit-keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}

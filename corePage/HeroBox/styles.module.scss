@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  grid-template-areas:
+    "titleCard titleCard switcher"
+    "titleCard titleCard navCard"
+    "introCard videoCard navCard"
+    "introCard videoCard navCard"
+    "findMoreCard quoteCard quoteCard"
+    "findMoreCard quoteCard quoteCard";
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  background-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 110vh;
+    grid-template-areas:
+      "switcher switcher"
+      "introCard videoCard"
+      "introCard videoCard"
+      "navCard navCard"
+      "navCard navCard"
+      "titleCard titleCard"
+      "titleCard titleCard"
+      "findMoreCard quoteCard"
+      "findMoreCard quoteCard";
+  }
+}
+
+@media (max-width: 660px) {
+  .header {
+    height: 170vh;
+    grid-template-areas:
+      "switcher switcher"
+      "introCard introCard"
+      "introCard introCard"
+      "videoCard videoCard"
+      "videoCard videoCard"
+      "navCard navCard"
+      "navCard navCard"
+      "titleCard titleCard"
+      "titleCard titleCard"
+      "findMoreCard findMoreCard"
+      "findMoreCard findMoreCard"
+      "quoteCard quoteCard"
+      "quoteCard quoteCard";
+  }
+}

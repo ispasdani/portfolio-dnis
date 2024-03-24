@@ -1,0 +1,13 @@
+.newsInfoWrapper {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  background-color: var(--background-grey);
+  border-radius: 15px;
+}
+
+@media (max-width: 800px) {
+  .newsInfoWrapper {
+    padding: 15px;
+  }
+}

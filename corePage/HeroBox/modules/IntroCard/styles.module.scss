@@ -1,0 +1,105 @@
+.introCard {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  background-color: var(--background-grey);
+  border-radius: 15px;
+
+  .introText {
+    margin-bottom: 10px;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .introCardBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+
+    .soMeIcon {
+      cursor: pointer;
+      transition: 0.3s all ease-in-out;
+      width: 25px;
+      width: 25px;
+    }
+
+    .soMeIcon:hover {
+      transform: translateY(-5px);
+    }
+    // THIS IS A MODAL------------------------------------
+    .iconLink {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hoverStaticModal {
+        display: none;
+        position: absolute;
+        top: -50px;
+        left: -38px;
+        transform: translateY(50%);
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        background-color: var(--main-neon-green);
+        color: var(--main-black);
+        -webkit-animation: scale-in-center 0.4s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: scale-in-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+    // THIS IS A MODAL-----------------------------------
+    .iconLink:hover .hoverStaticModal {
+      display: flex;
+    }
+  }
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .introCard {
+    .introCardBottom {
+      .soMeIcon {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+  }
+}

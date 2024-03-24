@@ -1,0 +1,51 @@
+.nav {
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0px;
+
+  .navLink {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-grey);
+    position: relative;
+
+    .decorLine {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 20px;
+      height: 5px;
+      background-color: var(--main-neon-green);
+      transition: 0.4s all ease-in-out;
+    }
+
+    .textSpan {
+      color: var(--main-black);
+    }
+  }
+
+  .navLink:hover {
+    background-color: var(--light-grey);
+  }
+
+  .navLink:hover .textSpanOuter {
+    text-decoration-line: line-through;
+    color: var(--main-neon-green);
+  }
+
+  .navLink:hover .decorLine {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    margin: 10px;
+  }
+}

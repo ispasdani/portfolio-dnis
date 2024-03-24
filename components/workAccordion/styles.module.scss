@@ -1,0 +1,109 @@
+.workAccordion {
+  width: 100%;
+  height: auto;
+  background-color: var(--main-white);
+
+  .workAccordionTop {
+    width: 100%;
+    min-height: 55px;
+    border-bottom: 1px solid var(--border-grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 0px 10px;
+
+    .lineDecor {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0px;
+      height: 5px;
+      background-color: var(--main-neon-green);
+      transition: 0.5s all ease-in-out;
+    }
+
+    .workAccordionLeft {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      p {
+        margin: 0px 5px;
+        transition: 0.3s all ease-in-out;
+
+        span {
+          color: var(--main-black);
+          text-transform: uppercase;
+        }
+      }
+
+      .decorCircle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--main-black);
+        margin-right: 15px;
+        transition: 0.3s all ease-in-out;
+      }
+    }
+
+    .workAccordionImage {
+      border: 1px solid black;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+  }
+
+  .expand {
+    background-color: var(--background-grey);
+    width: 100%;
+    min-height: 300px;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .workImageWrapper {
+      margin: 50px 0px;
+      align-self: center;
+    }
+
+    .workVideoWrapper {
+      margin: 50px 0px;
+      width: 90%;
+      align-self: center;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.workAccordionTop:hover {
+  background-color: var(--background-grey);
+}
+
+.workAccordionTop:hover .lineDecor {
+  width: 100%;
+  background-color: var(--main-neon-green);
+}
+
+.workAccordionTop:hover .workAccordionLeft .decorCircle {
+  background-color: var(--main-neon-green);
+}
+
+.workAccordionTop:hover .workAccordionLeft p {
+  text-decoration-line: line-through;
+  color: var(--main-neon-green);
+}
+
+.workAccordionTop:hover svg {
+  fill: var(--main-neon-green);
+}

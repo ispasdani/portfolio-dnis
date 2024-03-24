@@ -1,0 +1,31 @@
+.coursesIntro {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: var(--background-grey);
+
+  .principles {
+    background-color: var(--main-white);
+    width: 100%;
+  }
+}
+
+@media (max-width: 440px) {
+  .coursesIntro {
+    overflow-y: scroll;
+  }
+
+  .coursesIntro::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .coursesIntro::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  .coursesIntro::-webkit-scrollbar-thumb {
+    background-color: var(--main-white);
+    border-radius: 20px;
+  }
+}

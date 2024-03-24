@@ -1,0 +1,73 @@
+.helpIcon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  margin: 5px;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+
+  .danger {
+    fill: var(--main-black);
+  }
+
+  .textDanger {
+    color: var(--main-black);
+  }
+
+  .info {
+    fill: var(--info-blue);
+  }
+
+  .textInfo {
+    color: var(--info-blue);
+  }
+
+  svg {
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--main-blue);
+    transform: translateX(0);
+    display: block;
+    visibility: hidden;
+    text-align: center;
+  }
+
+  svg:hover {
+    transform: scale(1.1) rotate(360deg);
+  }
+
+  svg:hover ~ p {
+    display: block;
+    visibility: visible;
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}

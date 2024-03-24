@@ -1,0 +1,118 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0px;
+  position: relative;
+
+  .hoverStaticModalPin {
+    position: absolute;
+    top: -40px;
+    display: none;
+    -webkit-animation: scale-in-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: scale-in-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    .hoverStaticModal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 210px;
+      height: 30px;
+      background-color: var(--main-neon-green);
+      position: relative;
+      color: var(--main-black);
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .lessSign {
+    font-size: 32px;
+    margin-right: 5px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .skullSign {
+    font-size: 32px;
+    margin: 0px 5px;
+    display: none;
+  }
+
+  .greaterSign {
+    font-size: 32px;
+    transition: 0.3s all ease-in-out;
+  }
+}
+
+.logo:hover .lessSign {
+  transform: translateX(-8px);
+}
+
+.logo:hover .greaterSign {
+  transform: translateX(8px);
+}
+
+.logo:hover .skullSign {
+  display: block;
+  background: var(--main-black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo:hover > .hoverStaticModalPin {
+  display: block;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-in-with-rotation-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-with-rotation-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}

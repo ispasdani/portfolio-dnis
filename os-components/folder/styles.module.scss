@@ -1,0 +1,32 @@
+.folder {
+  width: 70px;
+  height: 90px;
+  margin: 15px;
+  cursor: pointer;
+  z-index: 2;
+
+  .folderIcon {
+    width: 70px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    .icon {
+      object-fit: cover;
+    }
+  }
+
+  .folderTitle {
+    width: 70px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.folder:hover {
+  background-color: #6e6e6e;
+}

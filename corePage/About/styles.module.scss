@@ -1,0 +1,46 @@
+.about {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  grid-template-areas:
+    "aboutBanner aboutBanner"
+    "introOne introTwo"
+    "introOne introThree"
+    "introOne introThree"
+    "programmingLang introThree"
+    "programmingLang introThree";
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+}
+
+@media (max-width: 800px) {
+  .about {
+    height: 180vh;
+    grid-template-areas:
+      "aboutBanner aboutBanner"
+      "introOne introOne"
+      "introOne introOne"
+      "introTwo introTwo"
+      "introTwo introTwo"
+      "introThree introThree"
+      "introThree introThree"
+      "introThree introThree"
+      "programmingLang programmingLang";
+  }
+}
+
+@media (max-width: 570px) {
+  .about {
+    grid-template-areas:
+      "aboutBanner aboutBanner"
+      "introOne introOne"
+      "introOne introOne"
+      "introTwo introTwo"
+      "introTwo introTwo"
+      "introThree introThree"
+      "introThree introThree"
+      "introThree introThree"
+      "programmingLang programmingLang"
+      "programmingLang programmingLang";
+  }
+}

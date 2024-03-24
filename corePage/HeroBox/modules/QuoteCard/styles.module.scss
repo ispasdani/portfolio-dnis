@@ -1,0 +1,122 @@
+.quoteCard {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--border-grey);
+  background-color: var(--main-white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .triangleLeft {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font-size: 40px;
+    color: var(--main-neon-green);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .triangleRight {
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+    font-size: 40px;
+    color: var(--main-neon-green);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .squareChange {
+    width: 50px;
+    height: 30px;
+    background-color: var(--main-neon-green);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .firstQuote {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    -webkit-animation: slide-in-fwd-center 0.5s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-fwd-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+
+    p {
+      width: 100px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--main-neon-green);
+    }
+
+    p:nth-child(2) {
+      margin-left: 35px;
+    }
+  }
+
+  .secondQuote {
+    -webkit-animation: slide-in-fwd-center 0.5s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-fwd-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: var(--main-neon-green);
+    }
+
+    p:nth-child(2) {
+      width: 280px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.triangleLeft:hover {
+  transform: rotate(360deg);
+}
+
+.squareChange:hover {
+  transform: skew(20deg, 0deg);
+}
+
+.triangleRight:hover {
+  transform: rotate(360deg);
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

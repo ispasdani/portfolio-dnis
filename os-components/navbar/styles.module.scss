@@ -1,0 +1,21 @@
+.navbar {
+  min-width: 200px;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 40px;
+  /* From https://css.glass */
+  background: rgba(3, 4, 94, 0.64);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+
+  .terminalItem {
+    position: relative;
+  }
+}

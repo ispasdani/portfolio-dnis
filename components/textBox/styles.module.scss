@@ -1,0 +1,10 @@
+.textBox {
+  margin: 5px 15px 25px 15px;
+}
+
+@media (max-width: 800px) {
+  .textBox {
+    width: 100% !important;
+    margin: 25px 0px;
+  }
+}
